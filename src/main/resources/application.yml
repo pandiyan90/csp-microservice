@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: csp-microservice
+
+server:
+  port: 8081
+
+# CSP configuration - automatically picked up by the starter
+security:
+  csp:
+    enabled: true
+    directives:
+      script-src: ["'self'", "'strict-dynamic'"]
+      connect-src: ["'self'", "https://user-api.internal"]
